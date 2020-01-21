@@ -110,10 +110,8 @@ def checkout(cart, coupons)
   while c < cart.length do
     tot += (cart[c][:price] * cart[c][:count])
     c += 1
-    pp tot
   end 
   if tot > 100.00 
-    tot = tot - (tot * 0.1)
     pp tot
   end 
   tot 
