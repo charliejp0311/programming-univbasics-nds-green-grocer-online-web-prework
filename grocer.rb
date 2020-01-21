@@ -113,8 +113,8 @@ def checkout(cart, coupons)
     pp tot
   end 
   if tot > 100.00 
-    pp tot 
     tot = tot - (tot * 0.1)
+    pp tot
   end 
   tot 
 end
