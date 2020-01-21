@@ -68,6 +68,7 @@ def apply_coupons(cart, coupons)
       if coupons[c][:item] == cart[d][:item] and coupons[c][:num] == cart[d][:count]
         cart[d][:count] = cart[d][:count] - coupons[c][:num]
         cart[items_in_cart] = Hash[:item => "#{cart[d][:item]} W/COUPON", :price => discount_price, :clearance => cart[d][:clearance], :count => coupons[c][:num]]
+        pp cart.length
       end
       d += 1
     end
