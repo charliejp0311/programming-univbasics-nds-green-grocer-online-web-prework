@@ -105,6 +105,7 @@ def checkout(cart, coupons)
   apply_coupons(cart, coupons)
   apply_clearance(cart)
   pp cart 
+  pp coupons
   c = 0
   tot = 0 
   while c < cart.length do
@@ -112,7 +113,7 @@ def checkout(cart, coupons)
     c += 1
   end 
   if tot > 100.00 
-    pp tot * 0.1
+    tot = tot - (tot * 0.1)
   end 
   tot 
 end
