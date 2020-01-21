@@ -101,11 +101,10 @@ def checkout(cart, coupons)
   #
   # BEFORE it begins the work of calculating the total (or else you might have
   # some irritated customers
-  consolidate_cart(cart)
-  apply_coupons(cart, coupons)
-  apply_clearance(cart)
-  pp cart 
-  pp coupons
+  cart = consolidate_cart(cart)
+  cart = apply_coupons(cart, coupons)
+  cart = apply_clearance(cart)
+  
   c = 0
   tot = 0 
   while c < cart.length do
